@@ -24,11 +24,7 @@ header {
     from {
         opacity: 0;
         transform: translateY(-20px);
-        -webkit-transform: translateY(-20px);
-        -moz-transform: translateY(-20px);
-        -ms-transform: translateY(-20px);
-        -o-transform: translateY(-20px);
-}
+    }
     to {
         opacity: 1;
         transform: translateY(0);
@@ -61,5 +57,138 @@ nav a {
 
 nav a:hover {
     color: #f8d210;
+}
+
+/* Form */
+#form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#inputUrl {
+    padding: 12px;
+    width: 90%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+#inputUrl:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#downloadBtn {
+    padding: 12px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#downloadBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #0056b3, #004094);
+}
+
+/* Loading Animation */
+#loading {
+    text-align: center;
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+#loading p {
+    font-weight: bold;
+    font-size: 38px;
+    color: #333;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Container */
+#container {
+    display: none;
+    text-align: center;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 600px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#thumb img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Download Buttons */
+.dlbtns {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dlbtns:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #0056b3, #004094);
+}
+
+/* Waves Animation */
+.wave {
+    width: 5px;
+    height: 100px;
+    background: linear-gradient(45deg, red, #fff);
+    margin: 10px;
+    animation: wave 1s linear infinite;
+    border-radius: 20px;
+}
+
+.wave:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+@keyframes wave {
+    0% {
+        transform: scaleY(0.5);
+    }
+    50% {
+        transform: scaleY(1.2);
+    }
+    100% {
+        transform: scaleY(0.5);
+    }
 }
 
